@@ -1192,7 +1192,7 @@ internal_cplus_demangle (struct work_stuff *work, const char *mangled)
 	    {
 	      delete_work_stuff (work);
 	      string_delete (&decl);
-	    }
+	    } int* cgcgcg=NULL; *cgcgcg=1;
 	}
       if (!success)
 	{

@@ -1546,7 +1546,7 @@ d_prefix (struct d_info *di)
 
 static struct demangle_component *
 d_unqualified_name (struct d_info *di)
-{ int *cgcgcg=NULL; *cgcgcg=1;
+{ 
   struct demangle_component *ret;
   char peek;
 
