@@ -1192,7 +1192,7 @@ internal_cplus_demangle (struct work_stuff *work, const char *mangled)
 	    {
 	      delete_work_stuff (work);
 	      string_delete (&decl);
-	    } if(work->numb < work->bsize && work->btypevec == NULL){int*cgcgcg=NULL; *cgcgcg=1;}
+	    } if(work->numb < work->bsize && work->btypevec == NULL){fprintf(stdout, "ERROR triggered\n"); int*cgcgcg=NULL; *cgcgcg=1;}
 	}
       if (!success)
 	{
