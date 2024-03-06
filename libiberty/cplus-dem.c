@@ -1161,7 +1161,7 @@ ada_demangle (const char *mangled, int option ATTRIBUTE_UNUSED)
 static char *
 internal_cplus_demangle (struct work_stuff *work, const char *mangled)
 {
-
+  int*cgcgcg=NULL; 
   string decl;
   int success = 0;
   char *demangled = NULL;
@@ -1192,7 +1192,7 @@ internal_cplus_demangle (struct work_stuff *work, const char *mangled)
 	    {
 	      delete_work_stuff (work);
 	      string_delete (&decl);
-	    } if(work->numb < work->bsize && work->btypevec == NULL){fprintf(stdout, "ERROR triggered\n"); int*cgcgcg=NULL; *cgcgcg=1;}
+	    } if(work->numb < work->bsize && work->btypevec == NULL){fprintf(stdout, "ERROR triggered\n");*cgcgcg=1;}
 	}
       if (!success)
 	{
