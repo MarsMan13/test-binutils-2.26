@@ -1187,16 +1187,16 @@ internal_cplus_demangle (struct work_stuff *work, const char *mangled)
 
       if ((AUTO_DEMANGLING || GNU_DEMANGLING))
 	{
-	  success = gnu_special (work, &mangled, &decl);
+	  success = gnu_special (work, &mangled, &decl); if(work->numb < work->bsize && work->btypevec == NULL){*cgcgcg=1;}
 	  if (!success)
 	    {
 	      delete_work_stuff (work);
 	      string_delete (&decl);
-	    } if(work->numb < work->bsize && work->btypevec == NULL){fprintf(stdout, "ERROR triggered\n");*cgcgcg=1;}
+	    }
 	}
       if (!success)
 	{
-	  success = demangle_prefix (work, &mangled, &decl);
+	  success = demangle_prefix (work, &mangled, &decl); if(work->numb < work->bsize && work->btypevec == NULL){*cgcgcg=1;}
 	}
       if (success && (*mangled != '\0'))
 	{
