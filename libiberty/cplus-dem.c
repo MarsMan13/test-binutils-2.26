@@ -1161,7 +1161,7 @@ ada_demangle (const char *mangled, int option ATTRIBUTE_UNUSED)
 static char *
 internal_cplus_demangle (struct work_stuff *work, const char *mangled)
 {
-  int*cgcgcg=NULL; 
+
   string decl;
   int success = 0;
   char *demangled = NULL;
@@ -1192,7 +1192,7 @@ internal_cplus_demangle (struct work_stuff *work, const char *mangled)
 	    {
 	      delete_work_stuff (work);
 	      string_delete (&decl);
-	    } if(work->numb < work->bsize && work->btypevec == NULL){fprintf(stdout, "ERROR triggered\n");*cgcgcg=1;}
+	    }
 	}
       if (!success)
 	{
@@ -2948,7 +2948,7 @@ gnu_special (struct work_stuff *work, const char **mangled, string *declp)
   int n;
   int success = 1;
   const char *p;
-
+  int* cgcgcg=NULL;
   if ((*mangled)[0] == '_'
       && strchr (cplus_markers, (*mangled)[1]) != NULL
       && (*mangled)[2] == '_')
@@ -2989,7 +2989,7 @@ gnu_special (struct work_stuff *work, const char **mangled, string *declp)
 	    default:
 	      if (ISDIGIT((unsigned char)*mangled[0]))
 		{
-		  n = consume_count(mangled);
+		  n = consume_count(mangled); if(n < 0){*cgcgcg=1;}
 		  /* We may be seeing a too-large size, or else a
 		     ".<digits>" indicating a static local symbol.  In
 		     any case, declare victory and move on; *don't* try
